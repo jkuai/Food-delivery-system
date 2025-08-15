@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cart</title>
+        
+        <!-- style sheet to make everything pretty -->
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+
+    <body>
+        <h1 style="margin-top: 30px;">NomNow</h1>
+        <h3>Cart</h3>
+
+        <div style="display: flex; width: 100%;">
+            <div class="content_container" style="flex: 1;">
+                <h3>Items in Cart:</h3>
+            </div>
+            <div class="content_container" style="flex: 1;">
+                <label for="cardSelect" style="display:block; margin-bottom:10px;">Select a saved card:</label>
+                <select id="cardSelect" style="width: 300px; height: 35px; margin-bottom:20px;"></select>
+
+                <button class="popup_button" style="width: 300px; height: 50px; font-size: 15px;">Update Payment Information</button>
+                <!-- payment form popup containder (just another container overlapping current one)-->
+                <div class="popup_container" style="align-items: center;">
+                    <!-- actual container -->
+                    <div class="popup_box">
+                        <h1 style="margin-top: 20px; font-size: 30px">Payment Form</h1>
+
+                        <!-- Customer ID -->
+                        <select id="custid_select"
+                                class="text_input" style="width: 100%; height: 35px; margin-top: 20px;" required>
+                            <option value="">Loading customers…</option>
+                        </select>
+
+
+                        <!-- Card Number -->
+                        <input type="text" placeholder="Card Number" id="cardnumber"
+                               class="text_input" style="width: 100%; height: 30px; margin-top: 20px;" required>
+
+                        <!-- Expiry Date (YYYY-MM-DD) -->
+                        <input type="date" id="expireddate"
+                               class="text_input" style="width: 100%; height: 30px; margin-top: 20px;" required>
+
+                        <!-- CVV -->
+                        <input type="text" placeholder="CVV" id="CVV"
+                               class="text_input" style="width: 100%; height: 30px; margin-top: 20px;" required>
+
+                        <!-- Save -->
+                        <button id="savePaymentBtn" class="close_btn">Save</button>
+                    </div>
+
+                </div>
+
+                <h3>Total Price: $0.00</h3>
+
+<!--                &lt;!&ndash; for Division Query: finding all drivers who have delivered for all restaurants &ndash;&gt;-->
+<!--                <button class="popup_button" style="width: 200px; height: 50px;">Best Drivers</button>-->
+<!--                <div class="popup_container">-->
+<!--                    <div class="popup_box" style="margin-top: 300px;">-->
+<!--                        <h1 style="margin-top: 20px; font-size: 15px">Best Drivers</h1>-->
+<!--                        <p>Our most trustworthy drivers who have delivered for all restaurants!</p>-->
+<!--                        <button class="close_btn">Done</button>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+                <button id="checkoutBtn" class="blue_button"
+                        style="width: 200px; height: 50px; font-size: 15px;">Checkout</button>
+
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

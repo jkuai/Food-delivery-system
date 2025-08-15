@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        
+        <!-- style sheet to make everything pretty -->
+        <link rel="stylesheet" href="style.css"/>
+        <script>
+            let scrollIndex = 0;
+
+        </script>
+    </head>
+
+    <body>
+        <!-- title -->
+        <h1 style="margin-top: 30px;">NomNow</h1>
+        <h3>Crave it. Tap it. Nom it.</h3>
+        <h3 style="text-align: left; margin-left: 30px; margin-top: 30px;">Browse your options...</h3>
+
+        <div id="userBox" class="user_box"></div>
+
+        <!-- scrolling container with all restaurant choices -->
+        <div class="scroll_container">
+            <button class="popup_button">SUBWAY</button>
+            <div class="popup_container">
+                <div class="popup_box">
+                    <h1 style="margin-top: 20px; font-size: 30px">SUBWAY</h1>
+                    <p>Choose from the options below!</p>
+                    <button class="close_btn">Done</button>
+                </div>
+            </div>
+
+            <button class="popup_button">A&W</button>
+            <div class="popup_container">
+                <div class="popup_box">
+                    <h1 style="margin-top: 20px; font-size: 30px">A&W</h1>
+                    <p>Choose from the options below!</p>
+                    <button class="close_btn">Done</button>
+                </div>
+            </div>
+
+            <button class="popup_button">Steve's Poke</button>
+            <div class="popup_container">
+                <div class="popup_box">
+                    <h1 style="margin-top: 20px; font-size: 30px">Steve's Poke</h1>
+                    <p>Choose from the options below!</p>
+                    <button class="close_btn">Done</button>
+                </div>
+            </div>
+
+            <button class="popup_button">DownLow Chicken</button>
+            <div class="popup_container">
+                <div class="popup_box">
+                    <h1 style="margin-top: 20px; font-size: 30px">Downlow Chicken</h1>
+                    <p>Choose from the options below!</p>
+                    <button class="close_btn">Done</button>
+                </div>
+            </div>
+
+            <button class="popup_button">McDonalds</button>
+            <div class="popup_container">
+                <div class="popup_box">
+                    <h1 style="margin-top: 20px; font-size: 30px">McDonalds</h1>
+                    <p>Choose from the options below!</p>
+                    <button class="close_btn">Done</button>
+                </div>
+            </div>
+
+            <button class="popup_button">Tim Hortons</button>
+            <div class="popup_container">
+                <div class="popup_box">
+                    <h1 style="margin-top: 20px; font-size: 30px">Tim Hortons</h1>
+                    <p>Choose from the options below!</p>
+                    <button class="close_btn">Done</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- for Aggregation & Having Query: finding restaurants with avg above X -->
+        <button class="popup_button" style="width: 200px; height: 50px;">Best Rated</button>
+        <div class="popup_container">
+            <div class="popup_box">
+                <h1 style="margin-top: 20px; font-size: 15px">Best Rated</h1>
+                <p>Restaurants with average rating above </p>
+                <label for="ratingSelect">Min Rating:</label>
+                <select id="ratingSelect">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <button id="applyRating">Apply</button>
+                <button id="countRating" style="margin-left:10px;">Count</button>
+                <span id="countResult" style="margin-left:10px;"></span>
+                <div id="bestRatedList"></div>
+                <button class="close_btn">Done</button>
+            </div>
+        </div>
+
+        <!--  new Add-Review button begin  -->
+        <button class="popup_button" style="width: 200px; height: 50px; display:block; margin-top: 40px;">Add Review</button>
+        <div class="popup_container">
+            <div class="popup_box">
+                <h1 style="margin-top: 20px; font-size: 15px">Add Review</h1>
+                <div id="reviewRestList"></div>
+                <button class="close_btn">Done</button>
+            </div>
+        </div>
+
+        <!-- Review-History button   -->
+        <button class="popup_button"
+                style="width: 200px; height: 50px; display:block; margin-top: 40px;">
+            Review History
+        </button>
+        <div class="popup_container">
+            <div class="popup_box">
+                <h1 style="margin-top: 20px; font-size: 15px">Your Reviews</h1>
+                <div id="myReviewList"></div>
+                <button class="close_btn">Done</button>
+            </div>
+        </div>
+
+        <!-- Good-Reviewers button (division query) -->
+        <button class="popup_button"
+                style="width: 200px; height: 50px; display:block; margin-top: 40px;">
+            Good Reviewers
+        </button>
+        <div class="popup_container">
+            <div class="popup_box">
+                <h1 style="margin-top: 20px; font-size: 15px">Customers who reviewed every restaurant</h1>
+                <div id="goodReviewerList"></div>
+                <button class="close_btn">Done</button>
+            </div>
+        </div>
+
+
+        <!-- buttons for profile, cart and past orders -->
+         <div style="display: flex; flex-direction: row; position: fixed; bottom: 50px; left: 550px;">
+            <a href="cart.html" class="icon_button">
+                <div class="circle_icon"></div>
+                Cart
+            </a>
+<!--            <a href="profile.html" class="icon_button">-->
+<!--                <div class="circle_icon"></div>-->
+<!--                Profile-->
+<!--            </a>-->
+            <a href="history.html" class="icon_button">
+                <div class="circle_icon"></div>
+                History
+            </a>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

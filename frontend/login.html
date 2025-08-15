@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Log in page</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<h1 style="margin-top: 30px;">NomNow</h1>
+<h3>Log in</h3>
+
+<div class="content_container">
+
+    <input id="name" type="text" placeholder="Name"
+           class="text_input" required style="margin-top: 30px;">
+    <input id="customerId" type="text" placeholder="Customer ID"
+           class="text_input" required style="margin-top: 30px;">
+
+    <button id="loginButton" class="blue_button"
+            style="margin-top: 20px; font-size: 16px;">LOG IN</button>
+
+    <!-- error placeholder -->
+    <p id="loginError" class="error"
+       style="margin-top: 10px; color: red;"></p>
+
+    <a href="signup.html" class="yellow_button_link"
+       style="margin-top: 30px; font-size: 16px;">Don't have an account? Sign up here</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
